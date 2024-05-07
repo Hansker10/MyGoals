@@ -2,7 +2,7 @@ import { StyleSheet, View , Text, Pressable } from "react-native";
 
 function GoalItem({itemData, OndeLeteItem}){
     return(
-        <Pressable>
+        <Pressable onPress={OndeLeteItem}>
             <View style={style.goalsItem}>
                 <Text style={StyleSheet.goalsItem}>{itemData.item}</Text>
             </View>
