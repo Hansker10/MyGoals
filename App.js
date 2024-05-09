@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, TextInput, View, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
 import GoalInput from './componentes/Goalinput';
 import GoalItem from './componentes/Goaltem';
@@ -14,8 +14,10 @@ export default function App() {
   console.log(goals)
   }
 
-  function handleDeleteGoal(){
+  function handleDeleteGoal(id){
     console.log('DELETE')
+    const deleteGoal = goals.filter((goal) => {return goal.key !== id})
+    setGoals(deleteGoal)
   }
 
   return (
